@@ -1,0 +1,87 @@
+/* Custom */
+html {
+  scroll-behavior: smooth;
+}
+img {
+    max-width: 100%;
+}
+a[class] {
+  cursor: pointer;
+}
+ul#right-toc > li.level3 {
+  margin-left: 1em;
+}
+.csl-entry { /* References styles */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-left: 1.5em;
+  text-indent: -1.5em;
+}
+a[role="doc-biblioref"] {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.book-toc li .header-section-number {
+  display: inline-block;
+  min-width: 1.2em;
+  text-align: center;
+  margin-right: 0.2em;
+}
+main section[id] > p {
+  text-align: justify;
+}
+
+
+
+/* Copied from bs4_book */
+.hands-on::before {
+    display: block;
+    content: "✍️ " attr(data-title);
+    font-weight: bold;
+    font-size: 1.35em;
+    margin-bottom: .8em;
+    color: rgb(25, 0, 255);
+  }
+  .hands-on {
+    display: block;
+    background: rgba(215, 246, 255, 0.7);
+    border: 1px solid rgb(0, 195, 255);
+    border-radius: 8px;
+    padding: 0.5em 1em;
+  }
+  
+  .additional-notes, .course-resource {
+    padding-left: 0.35em;
+    font-size:0.85em;
+  }
+  .additional-notes > a:hover, .course-resource > a:hover {
+    color: #ff6d6d;
+    text-decoration: none;
+  }
+  .additional-notes {
+    color: #707070;
+    padding-left: 0;
+  }
+  
+  p.caption {
+    text-align: center;
+  }
+  
+  pre > code {
+    padding: .125rem 0;
+  }
+  
+  pre .copy button { 
+    display: none;
+  } 
+  
+  pre.sourceCode .copy button {
+    display: inline-block;
+    background-color: transparent;
+    color: #1995a54b;
+    border-color: transparent;
+  }
+  
+  pre.sourceCode .copy button:hover{
+    color:#fff;
+    background-color:#3D818A;
+    border-color:#3D818A
+  }
