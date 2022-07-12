@@ -14,8 +14,3 @@ tableTemplate: "$$tableTitle$$ $$i$$$$titleDelim$$$$t$$"   # $$tableTitle$$ $$i$
 figureTemplate: "$$figureTitle$$ $$i$$$$titleDelim$$$$t$$" # $$figureTitle$$ $$i$$$$titleDelim$$ $$t$$
 eqnPrefixTemplate: "$$p$$&nbsp;($$i$$)"  # $$p$$&nbsp;($$i$$) | $$p$$&nbsp;$$i$$
 ...
-
-
-<!-- Reference Title -->
-# 參考文獻 {.unnumbered}
-
