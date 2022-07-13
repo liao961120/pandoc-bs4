@@ -1,0 +1,67 @@
+<section id="introduction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<p>Adipisicing<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> veniam occaecat officia excepteur sunt adipisicing sint amet anim labore commodo.</p>
+<p>Adipisicing duis duis do sint dolor sit reprehenderit velit laborum proident mollit. Do sit do nulla aute Lorem non excepteur qui ullamco exercitation minim ullamco ea nisi. In consectetur Lorem consectetur Lorem Lorem deserunt magna aliqua reprehenderit id proident labore Lorem.</p>
+<section id="custom-box" class="level2" data-number="1.1">
+<h2 data-number="1.1"><span class="header-section-number">1.1</span> Custom Box</h2>
+<p>You can define a box area with a custom title.</p>
+<div class="Box" title="Custom Box Title">
+<p>Markdown content and other blocks are enabled, e.g., code:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Custom code block&quot;</span>)</span></code></pre></div>
+</div>
+</section>
+</section>
+<section id="the-basics" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> The Basics</h1>
+<section id="citation" class="level2" data-number="2.1">
+<h2 data-number="2.1"><span class="header-section-number">2.1</span> Citation</h2>
+<p>Citations could be added and formatted with <a href="https://github.com/jgm/pandoc-citeproc">pandoc-citeproc</a>. See <span class="citation" data-cites="dunning1993">Dunning (<a href="#ref-dunning1993" role="doc-biblioref">1993</a>)</span> for instance.</p>
+</section>
+<section id="figures" class="level2" data-number="2.2">
+<h2 data-number="2.2"><span class="header-section-number">2.2</span> Figures</h2>
+<p>To properly display figures, figure paths should be specified <strong>relative to</strong> <code>index.html</code>. Hence, manipulation of the <code>figures/</code> directory may be needed in the build script<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+<figure>
+<img src="figures/sliding-window.png" id="fig:ref-label" alt="圖 1：Figure caption here" /><figcaption aria-hidden="true">圖 1：Figure caption here</figcaption>
+</figure>
+<p>You can refer to the figure with <a href="https://github.com/lierdakil/pandoc-crossref">pandoc-crossref</a>’s syntax: see 圖 <a href="#fig:ref-label">1</a>. To customized the prefix of figure (and table) captions, modify the YAML header in <code>pd-styles/variables.md</code>. Refer to <a href="https://github.com/lierdakil/pandoc-crossref">pandoc-crossref</a>’s documentation for the meaning of the variables</p>
+</section>
+</section>
+<section id="the-first-appendix" class="level1 appendix" data-number="3">
+<h1 class="appendix" data-number="3"><span class="header-section-number">3</span> The First Appendix</h1>
+<p>The class <code>appendix</code> can be given to the H1 chapter heading to make the chapter as an appendix (i.e., changing the top-level numbering to alphabetical order).</p>
+<p>Nostrud proident sint officia exercitation. Aute velit magna sunt mollit laboris veniam ut ad irure dolor aliqua. Dolor proident irure minim est eiusmod ex consectetur irure adipisicing. Sint ut consequat mollit sit commodo eu culpa.</p>
+<section id="about" class="level2" data-number="3.1">
+<h2 data-number="3.1"><span class="header-section-number">3.1</span> About</h2>
+<p>Tempor culpa aliquip ut dolore eiusmod quis fugiat adipisicing magna cupidatat non cupidatat eiusmod. Non do sit reprehenderit ex. Duis quis consectetur sint veniam irure anim ea. Elit laborum adipisicing laboris reprehenderit tempor cillum. Sunt nisi quis nisi veniam laborum anim proident. Aliquip nulla occaecat nostrud dolor tempor irure culpa consequat dolor irure tempor sit elit commodo.</p>
+<section id="subsubsection" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1"><span class="header-section-number">3.1.1</span> Subsubsection</h3>
+<p>Eiusmod veniam est non in ad duis ex.</p>
+</section>
+</section>
+</section>
+<section id="the-second-appendix" class="level1 appendix" data-number="4">
+<h1 class="appendix" data-number="4"><span class="header-section-number">4</span> The Second Appendix</h1>
+<p>Exercitation nulla aliqua qui reprehenderit duis amet ad nisi culpa eu.</p>
+<p>Cupidatat cillum consectetur quis laborum commodo voluptate aliquip commodo. Aute culpa adipisicing reprehenderit voluptate ad pariatur officia in cillum commodo ad ea elit. Pariatur amet reprehenderit cillum proident laboris. Amet cupidatat magna aliqua pariatur aute quis elit est consequat elit occaecat consectetur incididunt.</p>
+<section id="a-section" class="level2" data-number="4.1">
+<h2 data-number="4.1"><span class="header-section-number">4.1</span> A section</h2>
+<p>Quis aliquip adipisicing do consectetur proident elit dolor consequat enim pariatur esse sit aliquip.</p>
+</section>
+</section>
+<section id="references" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
+<div id="ref-dunning1993" class="csl-entry" role="doc-biblioentry">
+Dunning, T. (1993). Accurate methods for the statistics of surprise and coincidence. <em>Computational Linguistics</em>, <em>19</em>(1), 61–74.
+</div>
+</div>
+</section>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>Footnotes and references are shown as popovers when clicked.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>For instance, the figure directory (<code>chapters/figures</code>) could be copied to the same directory where <code>index.html</code> is found.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> chapters/figures .</span></code></pre></div>
+<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></li>
+</ol>
+</section>
