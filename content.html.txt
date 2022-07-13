@@ -28,7 +28,11 @@
 </section>
 <section id="the-first-appendix" class="level1 appendix" data-number="3">
 <h1 class="appendix" data-number="3"><span class="header-section-number">3</span> The First Appendix</h1>
-<p>The class <code>appendix</code> can be given to the H1 chapter heading to make the chapter as an appendix (i.e., changing the top-level numbering to alphabetical order).</p>
+<p>The class <code>appendix</code> can be given to the H1 chapter heading to make the chapter as an appendix (i.e., changing the top-level numbering to alphabetical order):</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>The First Appendix {.appendix}</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">==============================</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>The class <span class="in">`appendix`</span> can be given to the H1 chapter heading...</span></code></pre></div>
 <p>Nostrud proident sint officia exercitation. Aute velit magna sunt mollit laboris veniam ut ad irure dolor aliqua. Dolor proident irure minim est eiusmod ex consectetur irure adipisicing. Sint ut consequat mollit sit commodo eu culpa.</p>
 <section id="about" class="level2" data-number="3.1">
 <h2 data-number="3.1"><span class="header-section-number">3.1</span> About</h2>

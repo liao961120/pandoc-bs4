@@ -2,7 +2,14 @@ The First Appendix {.appendix}
 ==============================
 
 The class `appendix` can be given to the H1 chapter heading to make the chapter
-as an appendix (i.e., changing the top-level numbering to alphabetical order).
+as an appendix (i.e., changing the top-level numbering to alphabetical order):
+
+```markdown
+The First Appendix {.appendix}
+==============================
+
+The class `appendix` can be given to the H1 chapter heading...
+```
 
 Nostrud proident sint officia exercitation. Aute velit magna sunt mollit laboris veniam ut ad irure dolor aliqua. Dolor proident irure minim est eiusmod ex consectetur irure adipisicing. Sint ut consequat mollit sit commodo eu culpa.
 
