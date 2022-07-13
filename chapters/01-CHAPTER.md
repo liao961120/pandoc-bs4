@@ -1,13 +1,76 @@
-<!-- No contents should appear here -->
+<!-- No visible contents would appear above the first chapter -->
 
 Introduction
 =============
 
-Adipisicing[^footnote] veniam occaecat officia excepteur sunt adipisicing sint amet anim labore commodo.
 
-Adipisicing duis duis do sint dolor sit reprehenderit velit laborum proident mollit. Do sit do nulla aute Lorem non excepteur qui ullamco exercitation minim ullamco ea nisi. In consectetur Lorem consectetur Lorem Lorem deserunt magna aliqua reprehenderit id proident labore Lorem.
+Template Setup
+--------------
+
+## Order of Markdown Files
+
+The order of the content could be specified in the build script `build.sh`.
+It is recommended to use filenames with number prefixes to indicate the 
+order of the files, so wildcards could be applied in the build command 
+to specify multiple files without specifying full names.
+
+
+## Book Info Variables
+
+The variables of the book template are set in the file `bookinfo.html`.
+
+
+## Reference Title
+
+The title of the reference is set by the markdown file in 
+`pd-styles/references.md`.
+
+
+
+Text Formatting
+-----------------
+
+## Popovers
+
+Footnotes[^footnote] and bibliographies[@dunning1993] are shown as popovers when clicked.
+
 
 [^footnote]: Footnotes and references are shown as popovers when clicked.
+
+
+## Citation
+
+Citations could be added and formatted with [pandoc-citeproc][cite]. See
+@dunning1993 for instance.
+
+
+## Figures and Tables
+
+To properly display figures, figure paths should be specified 
+**relative to** `index.html`. Hence, manipulation of the `figures/` directory
+may be needed in the build script[^2].
+
+![Figure caption here](figures/sliding-window.png){#fig:ref-label}
+
+
+You can refer to the figure with [pandoc-crossref][pd-crf]'s syntax: see 
+@fig:ref-label. To customized the prefix of figure (and table) captions, 
+modify the YAML header in `pd-styles/variables.md`. Refer to 
+[pandoc-crossref][pd-crf]'s documentation for the meaning of the variables
+
+To cross-reference a table, also refer to [pandoc-crossref][pd-crf].
+
+
+
+[cite]: https://github.com/jgm/pandoc-citeproc
+[pd-crf]: https://github.com/lierdakil/pandoc-crossref
+
+[^2]: For instance, the figure directory (`chapters/figures`) could be copied
+to the same directory where `index.html` is found.
+    
+    ```bash
+    cp -r chapters/figures .
+    ```
 
 
 ## Custom Box
@@ -21,4 +84,3 @@ Markdown content and other blocks are enabled, e.g., code:
 print("Custom code block")
 ```
 :::::::::::
-
