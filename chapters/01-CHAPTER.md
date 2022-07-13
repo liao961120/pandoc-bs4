@@ -11,8 +11,10 @@ Template Setup
 
 The order of the content could be specified in the build script `build.sh`.
 It is recommended to use filenames with number prefixes to indicate the 
-order of the files, so wildcards could be applied in the build command 
-to specify multiple files without specifying full names.
+order of the files  (e.g., `01-intro.md`, `02-method.md`, ...). If filenames 
+are specified with such conventions, wildcards could be easily applied in 
+the build command include multiple files without writing down each of their
+filenames.
 
 
 ## Book Info Variables
@@ -32,7 +34,7 @@ Text Formatting
 
 ## Popovers
 
-Footnotes[^footnote] and bibliographies[@dunning1993] are shown as popovers when clicked.
+Footnotes[^footnote] and bibliographies [@dunning1993] are shown as popovers when clicked.
 
 
 [^footnote]: Footnotes and references are shown as popovers when clicked.
