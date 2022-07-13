@@ -1,36 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <div id="data-var-def" style="display:none;">
-        <!-- %%%%%%%% Define Book info HERE %%%%%%%%% -->
-        <!-- Contents -->
-        <p name="title">資料科學與語料分析:方法與實務</p>
-        <p name="left-bar-title">
-            <a href="https://lopentu.github.io/corpus-book">資料科學與語料分析:方法與實務</a>
-        </p>
-        <p name="subtitle">Hands-on Text Analytics for Data Science</p>
-        <p name="author">謝舒凱 & 台大語言所 LOPE 實驗室</p>
-        <p name="date">July 12, 2022</p>
-        <p name="content-name">目 錄</p>
-        <p name="right-toc-title">On this page</p>
-        <!-- Links -->
-        <a name="left-toc-external" href="https://lope.linguistics.ntu.edu.tw" target="_blank" style="display:flex;align-items:center;">
-            <img src="https://img.yongfu.name/affiliations/LOPE.jpg" style="height:1.5em;">
-            <span style="line-height: 1.2em;">&nbsp; LOPE</span>
-        </a>
-        <a name="right-toc-external1" href="https://drive.google.com/file/d/1Z6rLvz3jh-3w1EfkORByYwd8-DoKiEXB" target="_blank">
-            View PDF <i class="fa-solid fa-file-pdf"></i>
-        </a>
-        <a name="right-toc-external2" href="https://github.com/lopentu/corpus-book" target="_blank">
-            View Repo <i class="fa-brands fa-github"></i>
-        </a>
-        <a name="right-toc-external3" href="https://www.overleaf.com/docs?snip_uri=https://lopentu.github.io/corpus-book/book.zip&engine=xelatex&main_document=main.tex" target="_blank">
-            View Overleaf
-            <img src="https://img.yongfu.name/org/overleaf.svg" style="height:1.2em;margin-top:-4px;">
-        </a>
-        <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-    </div>
-
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -122,16 +92,24 @@
     <script src="bs4_book/utils.js"></script>
     <script>
         var book;  // Variable holding full book DOM
-        var bookInfo = document.getElementById('data-var-def');
+        var bookInfo;
         var currChapId = "";
         var leftToc = document.getElementById('left-toc');
         var rightToc = document.getElementById('right-toc');
         var searchIdx = [];
+        
         // Fetch book data
+        getBookInfo();
         fetch('./content.html.txt')
             .then(response => { return response.text() })
             .then(str => { 
                 book = parseHTML(str);
+                // Number appendix title
+                let pre = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+                book.querySelectorAll('section.appendix').forEach(appendix => {
+                    numberAppendix(appendix, pre.shift())
+                })
+
                 buildSearchIndex();
                 buildLeftToc()
                 // Load from URL if search param `chap` is given

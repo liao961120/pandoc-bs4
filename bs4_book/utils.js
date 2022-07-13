@@ -1,3 +1,10 @@
+async function getBookInfo() {
+    await fetch("bookinfo.html")
+            .then(r => {return r.text()})
+            .then(s => {return parseHTML(s)})
+            .then(d => {window.bookInfo = d.querySelector('div')});
+}
+
 //////////////   Utils    ////////////////
 function renderMath() {
     var mathElements = document.getElementsByClassName("math");
@@ -15,6 +22,27 @@ function renderMath() {
         }
     }
 };
+function numberAppendix(section, prefix) {
+    let headings = ["H1", "H2", "H3", "H4", "H5", "H6"];
+    [ ...section.children ].forEach(e => {
+        if (e.tagName == "SECTION" && e.hasAttribute('id'))
+            numberAppendix(e, prefix)
+        else if (headings.includes(e.tagName)) {
+            console.log(e)
+            let secnum;
+            let span = e.querySelector('span.header-section-number');
+            if (span) {
+                secnum = span.textContent.split('.');
+                secnum.shift();
+                secnum = `${prefix}.${secnum.join('.')}`
+                if (secnum.endsWith('.'))
+                    secnum = secnum.slice(0, -1);
+                span.remove();
+            }
+            e.innerHTML = `<span class="header-section-number">${secnum}</span> ${e.innerHTML}`
+        }
+    })
+}
 function getBookData() {
     return window.book.cloneNode(true)
 }
@@ -38,9 +66,10 @@ function getChapter(id) {
     return getBookData().getElementById(id);
 }
 function getFootnote(id) {
-    let p = getBookData().getElementById(id).querySelector("p");
-    if (p) p.removeChild(p.lastChild)
-    return p
+    let li = getBookData().getElementById(id);
+    if (li)
+        li.querySelector('a.footnote-back').remove();
+    return li
 }
 function getReference(id) {
     return getBookData().getElementById(id);

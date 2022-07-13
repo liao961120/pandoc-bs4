@@ -2,39 +2,22 @@ A Book Template for Pandoc HTML Fragments
 =========================================
 
 Recreation of bookdown's [bs4_book][bs4] HTML template, with dependencies other 
-than [pandoc][pd] & [pandoc-crossref][pd-crf] dropped.
+than [pandoc][pd] & [pandoc-crossref][pd-crf] dropped. 
+See a live example [here](https://yongfu.name/pandoc-bs4).
 
 
 ## Usage
 
 The template is designed to work with HTML fragments generated with Pandoc. The 
-top level headings (chapters) must be `H1` (i.e., `# Your heading` in markdown). 
+top-level headings (chapters) must be `H1` (i.e., `# Your heading` in markdown). 
 Texts preceding the first `H1` headings are ignored. An example build script 
-is shown below:
+can be found in `build.sh`.
 
 ```bash
-pandoc \
-    chapters/0*.md chapters/1*.md chapters/appendix*.md \
-    pd-styles/variables.md pd-styles/references.md \
-    --file-scope \
-    -o "content.html.txt" \
-    --from markdown+smart+header_attributes+superscript+subscript \
-    --to html5 \
-    --katex="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/" \
-    --filter="pandoc-crossref" \
-    --citeproc \
-    --strip-comments \
-    --section-divs \
-    --shift-heading-level-by=0 \
-    --metadata link-citations=true \
-    --csl="pd-styles/apa.csl" \
-    --bibliography="references.bib" \
-    -V lang="zh-Hant"
-    --number-sections \
-    -V indent
+bash build.sh
 ```
 
-The options shown below should be kept unchanged in order for the compiled book 
+Note the options shown below should be kept unchanged in order for the compiled book 
 to work as expected:
 
 ```bash

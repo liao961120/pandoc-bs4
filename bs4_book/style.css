@@ -28,6 +28,60 @@ a[role="doc-biblioref"] {
 main section[id] > p {
   text-align: justify;
 }
+/* Custom Box CSS */
+.Box {
+	/* background: rgb(100, 209, 171); */
+	border: 2px solid;
+	padding: 0.5em;
+	border-radius: 0.3em;
+	width: 100%;
+}
+.Box::before {
+	content: attr(title);
+	font-weight: bold;
+	font-size: 1.5em;
+}
+.Box p {
+	width: 100%;
+}
+.Box p:nth-child(1) {
+	margin-top: 0.15em;
+}
+.Box p:last-child() {
+	margin-bottom: 0;
+}
+/* Tables */
+table {
+  display: table;
+  width: 88%;
+  min-width: 380px;
+  margin: 1em auto 1.8em auto;
+  font-size: 0.9em;
+  border-collapse: collapse;
+  overflow-x: auto;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+tbody {
+  margin-top: 0.5em;
+  border-top: 1px solid #1a1a1a;
+  border-bottom: 1px solid #1a1a1a;
+}
+th {
+  border-top: 1px solid #1a1a1a;
+  padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+  padding: 0.125em 0.5em 0.25em 0.5em;
+}
+table caption, figcaption {
+  color: rgb(98, 98, 98);
+  width: 75%;
+  min-width: 380px;
+  text-align: center;
+  margin: .8em auto 0.2em auto;
+  font-size: 0.95em;
+}
+
 
 
 
