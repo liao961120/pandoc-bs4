@@ -28,7 +28,6 @@ function numberAppendix(section, prefix) {
         if (e.tagName == "SECTION" && e.hasAttribute('id'))
             numberAppendix(e, prefix)
         else if (headings.includes(e.tagName)) {
-            console.log(e)
             let secnum;
             let span = e.querySelector('span.header-section-number');
             if (span) {
