@@ -45,3 +45,10 @@ as markdown content since the files were concatinated before parsing).
 [bs4]: https://github.com/rstudio/bookdown/blob/main/inst/templates/bs4_book.html
 [pd]: https://pandoc.org
 [pd-crf]: https://github.com/lierdakil/pandoc-crossref
+
+
+## ToDo
+
+- Figure/Table/Equation... cross-reference
+- Enhancement
+    1. Fix appendix cross-ref number (e.g., **3.1** should be **A.1**)
