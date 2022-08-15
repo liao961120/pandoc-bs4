@@ -4,8 +4,12 @@ Introduction
 =============
 
 
-Template Setup
+Template Setup {#sec:templ}
 --------------
+
+
+See @sec:templ at chapter 1 and @sec:chap2 at chapter 2.
+
 
 ## Order of Markdown Files
 

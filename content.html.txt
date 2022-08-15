@@ -1,174 +1,107 @@
 <section id="introduction" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span>
-Introduction</h1>
-<section id="template-setup" class="level2" data-number="1.1">
-<h2 data-number="1.1"><span class="header-section-number">1.1</span>
-Template Setup</h2>
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<section id="sec:templ" class="level2" data-number="1.1">
+<h2 data-number="1.1"><span class="header-section-number">1.1</span> Template Setup</h2>
+<p>See 章節 <a href="#sec:templ">1.1</a> at chapter 1 and 章節 <a href="#sec:chap2">2.1</a> at chapter 2.</p>
 </section>
 <section id="order-of-markdown-files" class="level2" data-number="1.2">
-<h2 data-number="1.2"><span class="header-section-number">1.2</span>
-Order of Markdown Files</h2>
-<p>The order of the content could be specified in the build script
-<code>build.sh</code>. It is recommended to use filenames with number
-prefixes to indicate the order of the files (e.g.,
-<code>01-intro.md</code>, <code>02-method.md</code>, …). If filenames
-are specified with such conventions, wildcards could be easily applied
-in the build command include multiple files without writing down each of
-their filenames.</p>
+<h2 data-number="1.2"><span class="header-section-number">1.2</span> Order of Markdown Files</h2>
+<p>The order of the content could be specified in the build script <code>build.sh</code>. It is recommended to use filenames with number prefixes to indicate the order of the files (e.g., <code>01-intro.md</code>, <code>02-method.md</code>, …). If filenames are specified with such conventions, wildcards could be easily applied in the build command include multiple files without writing down each of their filenames.</p>
 </section>
 <section id="book-info-variables" class="level2" data-number="1.3">
-<h2 data-number="1.3"><span class="header-section-number">1.3</span>
-Book Info Variables</h2>
-<p>The variables of the book template are set in the file
-<code>bookinfo.html</code>.</p>
+<h2 data-number="1.3"><span class="header-section-number">1.3</span> Book Info Variables</h2>
+<p>The variables of the book template are set in the file <code>bookinfo.html</code>.</p>
 </section>
 <section id="reference-title" class="level2" data-number="1.4">
-<h2 data-number="1.4"><span class="header-section-number">1.4</span>
-Reference Title</h2>
-<p>The title of the reference is set by the markdown file in
-<code>pd-styles/references.md</code>.</p>
+<h2 data-number="1.4"><span class="header-section-number">1.4</span> Reference Title</h2>
+<p>The title of the reference is set by the markdown file in <code>pd-styles/references.md</code>.</p>
 </section>
 <section id="text-formatting" class="level2" data-number="1.5">
-<h2 data-number="1.5"><span class="header-section-number">1.5</span>
-Text Formatting</h2>
+<h2 data-number="1.5"><span class="header-section-number">1.5</span> Text Formatting</h2>
 </section>
 <section id="popovers" class="level2" data-number="1.6">
-<h2 data-number="1.6"><span class="header-section-number">1.6</span>
-Popovers</h2>
-<p>Footnotes<a href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a> and bibliographies <span
-class="citation" data-cites="dunning1993">(<a href="#ref-dunning1993"
-role="doc-biblioref">Dunning, 1993</a>)</span> are shown as popovers
-when clicked.</p>
+<h2 data-number="1.6"><span class="header-section-number">1.6</span> Popovers</h2>
+<p>Footnotes<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> and bibliographies <span class="citation" data-cites="dunning1993">(<a href="#ref-dunning1993" role="doc-biblioref">Dunning, 1993</a>)</span> are shown as popovers when clicked.</p>
 </section>
 <section id="citation" class="level2" data-number="1.7">
-<h2 data-number="1.7"><span class="header-section-number">1.7</span>
-Citation</h2>
-<p>Citations could be added and formatted with <a
-href="https://github.com/jgm/pandoc-citeproc">pandoc-citeproc</a>. See
-<span class="citation" data-cites="dunning1993">Dunning (<a
-href="#ref-dunning1993" role="doc-biblioref">1993</a>)</span> for
-instance.</p>
+<h2 data-number="1.7"><span class="header-section-number">1.7</span> Citation</h2>
+<p>Citations could be added and formatted with <a href="https://github.com/jgm/pandoc-citeproc">pandoc-citeproc</a>. See <span class="citation" data-cites="dunning1993">Dunning (<a href="#ref-dunning1993" role="doc-biblioref">1993</a>)</span> for instance.</p>
 </section>
 <section id="figures-and-tables" class="level2" data-number="1.8">
-<h2 data-number="1.8"><span class="header-section-number">1.8</span>
-Figures and Tables</h2>
-<p>To properly display figures, figure paths should be specified
-<strong>relative to</strong> <code>index.html</code>. Hence,
-manipulation of the <code>figures/</code> directory may be needed in the
-build script<a href="#fn2" class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a>.</p>
+<h2 data-number="1.8"><span class="header-section-number">1.8</span> Figures and Tables</h2>
+<p>To properly display figures, figure paths should be specified <strong>relative to</strong> <code>index.html</code>. Hence, manipulation of the <code>figures/</code> directory may be needed in the build script<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
 <figure>
-<img src="figures/sliding-window.png" id="fig:ref-label"
-alt="圖 1：Figure caption here" />
-<figcaption aria-hidden="true">圖 1：Figure caption here</figcaption>
+<img src="figures/sliding-window.png" id="fig:ref-label" alt="圖 1：Figure caption here" /><figcaption aria-hidden="true">圖 1：Figure caption here</figcaption>
 </figure>
-<p>You can refer to the figure with <a
-href="https://github.com/lierdakil/pandoc-crossref">pandoc-crossref</a>’s
-syntax: see 圖 <a href="#fig:ref-label">1</a>. To customized the prefix
-of figure (and table) captions, modify the YAML header in
-<code>pd-styles/variables.md</code>. Refer to <a
-href="https://github.com/lierdakil/pandoc-crossref">pandoc-crossref</a>’s
-documentation for the meaning of the variables</p>
-<p>To cross-reference a table, also refer to <a
-href="https://github.com/lierdakil/pandoc-crossref">pandoc-crossref</a>.</p>
+<p>You can refer to the figure with <a href="https://github.com/lierdakil/pandoc-crossref">pandoc-crossref</a>’s syntax: see 圖 <a href="#fig:ref-label">1</a>. To customized the prefix of figure (and table) captions, modify the YAML header in <code>pd-styles/variables.md</code>. Refer to <a href="https://github.com/lierdakil/pandoc-crossref">pandoc-crossref</a>’s documentation for the meaning of the variables</p>
+<p>To cross-reference a table, also refer to <a href="https://github.com/lierdakil/pandoc-crossref">pandoc-crossref</a>.</p>
 </section>
 <section id="custom-box" class="level2" data-number="1.9">
-<h2 data-number="1.9"><span class="header-section-number">1.9</span>
-Custom Box</h2>
+<h2 data-number="1.9"><span class="header-section-number">1.9</span> Custom Box</h2>
 <p>You can define a box area with a custom title.</p>
 <div class="Box" title="Custom Box Title">
 <p>Markdown content and other blocks are enabled, e.g., code:</p>
-<div class="sourceCode" id="cb2"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Custom code block&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Custom code block&quot;</span>)</span></code></pre></div>
 </div>
 </section>
 </section>
 <section id="lorem-ipsum" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Lorem
-Ipsum</h1>
-<p>Ea id incididunt deserunt Lorem excepteur pariatur reprehenderit
-tempor.</p>
-<p>Do est fugiat sint sunt excepteur veniam. Proident duis mollit labore
-sit nostrud fugiat commodo est nostrud fugiat sint sint irure ullamco.
-Eu commodo dolor ea nulla cupidatat ullamco esse. Sint anim culpa anim
-eu labore incididunt sit nisi. Aliquip adipisicing nisi et aliqua
-eiusmod id proident ex sunt. Esse ea velit aliquip do anim duis laboris
-sunt incididunt esse ad deserunt sint eu. Aute elit adipisicing non
-veniam sint voluptate eiusmod proident eiusmod nisi.</p>
+<h1 data-number="2"><span class="header-section-number">2</span> Lorem Ipsum</h1>
+<p>Ea id incididunt deserunt Lorem excepteur pariatur reprehenderit tempor.</p>
+<p>Do est fugiat sint sunt excepteur veniam. Proident duis mollit labore sit nostrud fugiat commodo est nostrud fugiat sint sint irure ullamco. Eu commodo dolor ea nulla cupidatat ullamco esse. Sint anim culpa anim eu labore incididunt sit nisi. Aliquip adipisicing nisi et aliqua eiusmod id proident ex sunt. Esse ea velit aliquip do anim duis laboris sunt incididunt esse ad deserunt sint eu. Aute elit adipisicing non veniam sint voluptate eiusmod proident eiusmod nisi.</p>
+<p>Should also work for appendicies 章節 <a href="#sec:app">3.1</a>.</p>
+<section id="sec:chap2" class="level2" data-number="2.1">
+<h2 data-number="2.1"><span class="header-section-number">2.1</span> A section</h2>
+<p>A section in chapter 2. Dolor do dolore aliquip reprehenderit qui aute ea sunt aliqua aliqua nostrud tempor velit. Dolore adipisicing sunt ullamco in nostrud anim. Nostrud consectetur velit fugiat non exercitation tempor commodo nulla. Minim quis esse non dolor ullamco officia nostrud dolore excepteur ut Lorem aliqua quis minim.</p>
+<p>Qui occaecat eu id et enim deserunt enim excepteur quis cupidatat ex. Lorem amet nostrud occaecat cillum id sit ullamco aliqua. Qui in nisi adipisicing sunt nulla exercitation qui. Ipsum sint mollit excepteur voluptate deserunt pariatur elit eiusmod. Laborum eu excepteur aute excepteur sint aliquip est cillum magna ipsum eiusmod deserunt velit. Sit voluptate occaecat quis anim deserunt eiusmod ex ex incididunt esse duis laboris velit nostrud.</p>
+<p>Ad commodo do cupidatat magna mollit. Labore non officia exercitation culpa nisi officia ipsum occaecat consectetur. Dolor minim veniam irure consectetur ipsum duis aliquip reprehenderit ipsum. Laboris exercitation ut duis ut do exercitation pariatur minim velit Lorem. Deserunt incididunt in non fugiat officia esse eu. Eiusmod Lorem nulla excepteur ut occaecat minim esse voluptate pariatur eiusmod.</p>
+<p>Est ad aliqua amet excepteur. Deserunt exercitation consequat veniam aliqua. Duis ex fugiat irure minim fugiat culpa incididunt consectetur cillum. Mollit qui eu proident aliqua. Qui excepteur mollit ex commodo anim sint duis enim. Ad amet cillum ea Lorem non laboris pariatur excepteur occaecat adipisicing consectetur ut excepteur. Nisi quis exercitation deserunt eu cillum id occaecat nisi excepteur exercitation nisi labore voluptate.</p>
+<p>Magna ex adipisicing officia labore reprehenderit anim reprehenderit anim amet sit aliquip excepteur do aute. Do sint tempor ea exercitation eu do aute aliqua mollit. Voluptate tempor eu nostrud consequat.</p>
+<p>Nulla tempor sint voluptate nisi dolor veniam ut quis consequat qui laborum adipisicing nostrud ut. Velit sit voluptate veniam laboris ut. Veniam officia ut consectetur irure deserunt elit laboris aliqua labore aliquip nulla cupidatat. Nisi quis sunt in sit incididunt qui voluptate ad officia.</p>
+<p>Culpa do culpa eu ullamco ad veniam exercitation. Nostrud ullamco deserunt quis commodo esse culpa pariatur incididunt. Irure ea excepteur in veniam aliqua nulla mollit commodo.</p>
+<p>Id laboris duis enim aute anim non labore ipsum minim proident. Eiusmod anim dolor pariatur dolor Lorem eu nisi excepteur excepteur non fugiat mollit. Dolore anim pariatur enim ut consectetur voluptate.</p>
 </section>
-<section id="the-first-appendix" class="level1 appendix"
-data-number="3">
-<h1 class="appendix" data-number="3"><span
-class="header-section-number">3</span> The First Appendix</h1>
-<p>The class <code>appendix</code> can be given to the H1 chapter
-heading to make the chapter as an appendix (i.e., changing the top-level
-numbering to alphabetical order):</p>
-<div class="sourceCode" id="cb3"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>The First Appendix {.appendix}</span>
+</section>
+<section id="the-first-appendix" class="level1 appendix" data-number="3">
+<h1 class="appendix" data-number="3"><span class="header-section-number">3</span> The First Appendix</h1>
+<p>The class <code>appendix</code> can be given to the H1 chapter heading to make the chapter as an appendix (i.e., changing the top-level numbering to alphabetical order):</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>The First Appendix {.appendix}</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">==============================</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>The class <span class="in">`appendix`</span> can be given to the H1 chapter heading...</span></code></pre></div>
-<p>Nostrud proident sint officia exercitation. Aute velit magna sunt
-mollit laboris veniam ut ad irure dolor aliqua. Dolor proident irure
-minim est eiusmod ex consectetur irure adipisicing. Sint ut consequat
-mollit sit commodo eu culpa.</p>
-<section id="about" class="level2" data-number="3.1">
-<h2 data-number="3.1"><span class="header-section-number">3.1</span>
-About</h2>
-<p>Tempor culpa aliquip ut dolore eiusmod quis fugiat adipisicing magna
-cupidatat non cupidatat eiusmod. Non do sit reprehenderit ex. Duis quis
-consectetur sint veniam irure anim ea. Elit laborum adipisicing laboris
-reprehenderit tempor cillum. Sunt nisi quis nisi veniam laborum anim
-proident. Aliquip nulla occaecat nostrud dolor tempor irure culpa
-consequat dolor irure tempor sit elit commodo.</p>
+<p>Nostrud proident sint officia exercitation. Aute velit magna sunt mollit laboris veniam ut ad irure dolor aliqua. Dolor proident irure minim est eiusmod ex consectetur irure adipisicing. Sint ut consequat mollit sit commodo eu culpa.</p>
+<section id="sec:app" class="level2" data-number="3.1">
+<h2 data-number="3.1"><span class="header-section-number">3.1</span> About</h2>
+<p>Tempor culpa aliquip ut dolore eiusmod quis fugiat adipisicing magna cupidatat non cupidatat eiusmod. Non do sit reprehenderit ex. Duis quis consectetur sint veniam irure anim ea. Elit laborum adipisicing laboris reprehenderit tempor cillum. Sunt nisi quis nisi veniam laborum anim proident. Aliquip nulla occaecat nostrud dolor tempor irure culpa consequat dolor irure tempor sit elit commodo.</p>
 <section id="subsubsection" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1"><span class="header-section-number">3.1.1</span>
-Subsubsection</h3>
+<h3 data-number="3.1.1"><span class="header-section-number">3.1.1</span> Subsubsection</h3>
 <p>Eiusmod veniam est non in ad duis ex.</p>
 </section>
 </section>
 </section>
-<section id="the-second-appendix" class="level1 appendix"
-data-number="4">
-<h1 class="appendix" data-number="4"><span
-class="header-section-number">4</span> The Second Appendix</h1>
-<p>Exercitation nulla aliqua qui reprehenderit duis amet ad nisi culpa
-eu.</p>
-<p>Cupidatat cillum consectetur quis laborum commodo voluptate aliquip
-commodo. Aute culpa adipisicing reprehenderit voluptate ad pariatur
-officia in cillum commodo ad ea elit. Pariatur amet reprehenderit cillum
-proident laboris. Amet cupidatat magna aliqua pariatur aute quis elit
-est consequat elit occaecat consectetur incididunt.</p>
+<section id="the-second-appendix" class="level1 appendix" data-number="4">
+<h1 class="appendix" data-number="4"><span class="header-section-number">4</span> The Second Appendix</h1>
+<p>Exercitation nulla aliqua qui reprehenderit duis amet ad nisi culpa eu.</p>
+<p>Cupidatat cillum consectetur quis laborum commodo voluptate aliquip commodo. Aute culpa adipisicing reprehenderit voluptate ad pariatur officia in cillum commodo ad ea elit. Pariatur amet reprehenderit cillum proident laboris. Amet cupidatat magna aliqua pariatur aute quis elit est consequat elit occaecat consectetur incididunt.</p>
 <section id="a-section" class="level2" data-number="4.1">
-<h2 data-number="4.1"><span class="header-section-number">4.1</span> A
-section</h2>
-<p>Quis aliquip adipisicing do consectetur proident elit dolor consequat
-enim pariatur esse sit aliquip.</p>
+<h2 data-number="4.1"><span class="header-section-number">4.1</span> A section</h2>
+<p>Quis aliquip adipisicing do consectetur proident elit dolor consequat enim pariatur esse sit aliquip.</p>
 </section>
 </section>
 <section id="references" class="level1 unnumbered">
 <h1 class="unnumbered">References</h1>
-<div id="refs" class="references csl-bib-body hanging-indent"
-data-line-spacing="2" role="doc-bibliography">
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
 <div id="ref-dunning1993" class="csl-entry" role="doc-biblioentry">
-Dunning, T. (1993). Accurate methods for the statistics of surprise and
-coincidence. <em>Computational Linguistics</em>, <em>19</em>(1), 61–74.
+Dunning, T. (1993). Accurate methods for the statistics of surprise and coincidence. <em>Computational Linguistics</em>, <em>19</em>(1), 61–74.
 </div>
 </div>
 </section>
-<section class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
+<section class="footnotes" role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1" role="doc-endnote"><p>Footnotes and references are shown as
-popovers when clicked.<a href="#fnref1" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
-<li id="fn2" role="doc-endnote"><p>For instance, the figure directory
-(<code>chapters/figures</code>) could be copied to the same directory
-where <code>index.html</code> is found.</p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> chapters/figures .</span></code></pre></div>
+<li id="fn1" role="doc-endnote"><p>Footnotes and references are shown as popovers when clicked.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>For instance, the figure directory (<code>chapters/figures</code>) could be copied to the same directory where <code>index.html</code> is found.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> chapters/figures .</span></code></pre></div>
 <a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></li>
 </ol>
 </section>

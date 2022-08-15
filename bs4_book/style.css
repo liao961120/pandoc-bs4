@@ -8,6 +8,9 @@ img {
 a[class] {
   cursor: pointer;
 }
+a.cross-ref-sec {
+  font-weight: bold;
+}
 ul#right-toc > li.level3 {
   margin-left: 1em;
 }

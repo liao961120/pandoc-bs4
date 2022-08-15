@@ -102,6 +102,18 @@ function buildSearchIndex() {
         getSectionIndex(chapter, chapPath, chapTitle)
     })
 }
+function labelSecCrossRefLink() {
+    document.querySelectorAll('a[href^="#sec:"] ').forEach(e => {
+        e.className = 'cross-ref-sec';
+        let secId = e.getAttribute('href');
+        e.removeAttribute('href');
+        let path = window.secCrossRefMap[secId.slice(1)]
+        e.setAttribute("data-path", path)
+        e.addEventListener("click", function() {
+            window.location.href = window.location.pathname + path + secId;
+        })
+    })
+}
 function buildBookInfo(type) {
     [ ...window.bookInfo.children ].forEach(tp => {
         let name = tp.getAttribute('name');
@@ -163,6 +175,9 @@ function showChapter(id) {
         else
             e.firstChild.className = ""
     })
+
+    // Set up cross-chapter cross-referencing
+    labelSecCrossRefLink();
 
     // Collect footnotes & references
     c.querySelectorAll('a.footnote-ref').forEach(e => {

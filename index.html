@@ -100,6 +100,7 @@
         var leftToc = document.getElementById('left-toc');
         var rightToc = document.getElementById('right-toc');
         var searchIdx = [];
+        var secCrossRefMap = {};
         
         // Fetch book data
         getBookInfo();
@@ -114,6 +115,9 @@
                 })
 
                 buildSearchIndex();
+                let arr = searchIdx.filter(x => x.id.startsWith('sec:'))
+                for (let i=0; i<arr.length; i++) 
+                    secCrossRefMap[arr[i].id] = arr[i].path
                 buildLeftToc()
                 // Load from URL if search param `chap` is given
                 let currChap = getUrlChap();
